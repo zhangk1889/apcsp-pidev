@@ -20,9 +20,9 @@ int main()
 
 
   if (strcmp(str1, str2) == 0)
-	printf("Strings identical.\n");
+	printf("Strings are the same.\n");
   else
-	printf("Strings different.\n");
+	printf("Strings are different.\n");
   printf("%s \n %s \n", str1, str1);
 
 
@@ -34,9 +34,9 @@ int main()
   printf("\nstr1 = %s; str2 = %s\n", str1, str2);
 
   if (strcmp(str1, str2) == 0)
-  	printf("Strings identical.\n");
+  	printf("Strings are the same.\n");
   else
-	printf("Strings different.\n");
+	printf("Strings are different.\n");
 
   strcpy(str3, str1);
   strcat(str3, str2);
