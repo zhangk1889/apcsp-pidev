@@ -3,7 +3,6 @@
 
 int main()
 {
-
   char str1[] = "abcdefghijklmnopqrstuvwxyz";
   char str2[27];
   char str3[53];
@@ -41,5 +40,4 @@ int main()
   strcpy(str3, str1);
   strcat(str3, str2);
   printf("\nstr1 = %s \nstr2 = %s \nstr3 = %s\n", str1, str2, str3);
-
 }
