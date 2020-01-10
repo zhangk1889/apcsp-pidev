@@ -11,33 +11,45 @@ int main()
 
   for (int i = 0; i < 26; i++)
   {
-	str2[i] = a;
-	a++;
+        str2[i] = a;
+        a++;
   }
   str2[26] = 0;
   printf("str1 = %s; str2 = %s\n", str1, str2);
 
 
   if (strcmp(str1, str2) == 0)
+
 	printf("Strings are the same.\n");
   else
 	printf("Strings are different.\n");
+
+        printf("Strings are the same.\n");
+  else
+        printf("Strings are different.\n");
+
   printf("%s \n %s \n", str1, str1);
 
 
   for (int i = 0; i < 26; i++)
   {
-	str2[i] = a - 58;
-	a ++;
+        str2[i] = a - 58;
+        a ++;
   }
   printf("\nstr1 = %s; str2 = %s\n", str1, str2);
 
   if (strcmp(str1, str2) == 0)
+
   	printf("Strings are the same.\n");
   else
 	printf("Strings are different.\n");
+
+        printf("Strings are the same.\n");
+  else
+        printf("Strings are different.\n");
 
   strcpy(str3, str1);
   strcat(str3, str2);
   printf("\nstr1 = %s \nstr2 = %s \nstr3 = %s\n", str1, str2, str3);
 }
+
