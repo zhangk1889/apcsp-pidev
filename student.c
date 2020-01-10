@@ -2,51 +2,71 @@
 #include <string.h>
 
 struct Student {
-  char first name[50];
-  char last name[50];
-  char age[50];
-  char student id[100];
-  int studentid;
+  char fname[50];
+  char lname[50];
+  int age;
+  int id;
 };
 
-
-void printBookByVal(struct Book book)
+int enterStudent (struct Student* student)
 {
-  // a new copy of book
-  printf("my book is -\n");
-  printf("  title:%s\n", book.title);
-  printf("  author:%s\n", book.author);
-  printf("  subject:%s\n", book.subject);
-  printf("  id:%d\n", book.bookid);
+	char first[50], last[50];
+	char studentAge[50], studentId[50];
+	int yearsOld;
+	int studentNumber;
+
+while (1)
+{
+	printf("First name?\n");
+	fgets(first, 50, stdin);
+	if (sscanf(first, "%s", student->fname) == 1) break;
+		printf("Choose a better name.\n");
 }
 
-void printBookByPtr(struct Book* book)
+while (1)
 {
-  printf("my book is -\n");
-  printf("  title:%s\n", book->title);
-  printf("  author:%s\n", book->author);
-  printf("  subject:%s\n", book->subject);
-  printf("  id:%d\n", book->bookid);
-
-  // could do it this way, but -> is easier
-  printf("  id:%d\n", (*book).bookid);
+	printf("Last name?\n");
+	fgets(last, 50, stdin);
+	if (sscanf(last, "%s", student->lname) == 1) break;
+		printf("Choose a better surname.\n");
 }
 
-int main()
+while (1)
 {
-  // create two books
-  struct Book mybook1;
-  struct Book mybook2;
+	printf("Age?\n");
+	fgets(studentAge, 50, stdin);
+	if (sscanf(studentAge, "%d", &yearsOld) == 1) break;
+		printf("Inappropriate age.\n");
+}
+student->age = yearsOld;
 
-  // fill one book with info - note strcpy
-  strcpy(mybook1.title, "C Programming");
-  strcpy(mybook1.author, "Nuha Ali");
-  strcpy(mybook1.subject, "C Programming");
-  mybook1.bookid = 62782;
+while (1)
+{
+	printf("Id?\n");
+	fgets(studentId, 50, stdin);
+	if (sscanf(studentId, "%d", &studentNumber) == 1) break;
+		printf("Inappropriate Id number.\n");
+}
+student->id = studentNumber;
+}
 
-  // pass by value
-  printBookByVal(mybook1);
+int printStudent (struct Student* student)
+{
+	printf("First name: %s\nLast name: %s\nAge: %d\nId: %d\n\n", student->fname, student->lname, student->age, student->id);
+}
 
-  // pass by ref - generally preferred as we don't make a copy
-  printBookByPtr(&mybook1);
+int main ()
+{
+	char cont[50];
+	int i = 0;
+	int n = 0;
+
+	struct Student myStudent[25];
+	do {
+enterStudent(&myStudent[i]);
+} while (i < 25 && (cont[0] == 'Y'));
+
+printf("\n");
+
+	printStudent(&myStudent[n]);
 }
